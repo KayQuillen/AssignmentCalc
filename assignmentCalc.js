@@ -13,8 +13,12 @@ document.getElementById("output").innerHTML = x
 function minE(){
     var x = Number(document.getElementById("num1").value);
     var y = Number(document.getElementById("num2").value);
-    x -= y;
-document.getElementById("output").innerHTML = x
+    var z;
+    if(x < y){
+        z = y %= x;
+    }else{
+        z = x %= y;}
+    document.getElementById("output").innerHTML = z
 }
 function timE(){
     var x = Number(document.getElementById("num1").value);
@@ -31,7 +35,12 @@ document.getElementById("output").innerHTML = x
 function modE(){
     var x = Number(document.getElementById("num1").value);
     var y = Number(document.getElementById("num2").value);
-    x %= y ;
-document.getElementById("output").innerHTML = x
+    var z;
+    if(x < y){
+        z = y %= x;
+    }else{
+        z = x %= y;}
+    document.getElementById("output").innerHTML = z
+    
 }
 
